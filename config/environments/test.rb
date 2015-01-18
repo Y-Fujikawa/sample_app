@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # パスワードの暗号化の際、強固にするため処理が遅くなっている
+  # テスト環境では、bcryptのコスト関数を下げることでテストの速度を向上させる
+  ActiveModel::SecurePassword.min_cost = true
 end

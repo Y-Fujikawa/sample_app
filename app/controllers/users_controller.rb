@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # SessionHelperに記述されている、sign_in
+      sign_in @user
       flash[:success] = "Welcom to the Sample App!"
       redirect_to @user
     else

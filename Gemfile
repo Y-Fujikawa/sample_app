@@ -44,6 +44,7 @@ group :development, :test do
 
   # User rspec-rails
   gem 'rspec-rails'
+  gem 'rspec-its'
 
   gem 'pry-rails'
 end

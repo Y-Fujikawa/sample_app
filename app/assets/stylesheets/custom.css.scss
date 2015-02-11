@@ -5,6 +5,7 @@
 $grayDarker: #222;
 $gray: #555;
 $grayLight: #999;
+$grayLighter: #eee;
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -166,4 +167,18 @@ input {
 
 .field_with_errors {
   @extend .has-error;
+}
+
+/* users index */
+.users {
+  list-style: auto;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLight;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
 }
